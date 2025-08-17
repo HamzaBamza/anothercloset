@@ -140,9 +140,10 @@ import "../styles/productlist.css";
   document.addEventListener("DOMContentLoaded", async () => {
   const area = new URLSearchParams(window.location.search).get("area");
 
-  let url = "https://hrxhpqduitxprhjkzzfc.supabase.co/rest/v1/clothing";
+  let url =
+    "https://hrxhpqduitxprhjkzzfc.supabase.co/rest/v1/clothing?select=*";
   if (area) {
-    url += `?area=eq.${area}`;
+    url += `&area=eq.${area}`;
   }
 
   const key =
@@ -152,6 +153,7 @@ import "../styles/productlist.css";
     const response = await fetch(url, {
       headers: {
         apikey: key,
+        Authorization: `Bearer ${key}`,
       },
     });
 

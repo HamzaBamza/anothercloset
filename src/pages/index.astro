@@ -11,12 +11,15 @@ import Split3 from "../components/Split3.astro";
 import Textsection from "../components/Textsection.astro";
 import Button from "../components/Button.astro";
 
-const url = "https://hrxhpqduitxprhjkzzfc.supabase.co/rest/v1/clothing";
-const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhyeGhwcWR1aXR4cHJoamt6emZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcyMDk1NTAsImV4cCI6MjA2Mjc4NTU1MH0.xI1Li8DVzlUoZilPzFkc8fNfs8tw252yEGNHv-xM7nc";
+const url =
+  "https://hrxhpqduitxprhjkzzfc.supabase.co/rest/v1/clothing?select=*";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhyeGhwcWR1aXR4cHJoamt6emZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcyMDk1NTAsImV4cCI6MjA2Mjc4NTU1MH0.xI1Li8DVzlUoZilPzFkc8fNfs8tw252yEGNHv-xM7nc";
 
 const options = {
   headers: {
     apikey: key,
+    Authorization: `Bearer ${key}`,
   },
 };
 
